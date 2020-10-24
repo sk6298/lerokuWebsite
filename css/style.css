@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url("./utilies.css");
 
 :root {
   --primary-color: #047aed;
@@ -115,68 +116,45 @@ img {
 }
 
 .showcase::before,
-.showcase::after{
-    content: '';
-    position: absolute;
-    height: 100px;
-    bottom: -70px;
-    right: 0;
-    left: 0;
-    background-color: #fff;
-    transform: skewY(-3deg);
-    -webkit-transform: skewY(-3deg);
-    -moz-transform: skewY(-3deg);
-    -ms-transform: skewY(-3deg);
-}
-
-/* Utilities */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  overflow: auto; /* To remove margin of h1 */
-  padding: 0 40px;
-}
-
-.card {
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
   background-color: #fff;
-  color: #333;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin: 10px;
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+}
+/* Stats */
+.stats {
+  padding-top: 100px;
 }
 
-.btn{
-    display: inline-block;
-    color: #fff;
-    background-color: var(--primary-color);
-    padding: 10px 30px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
 }
 
-.btn:hover{
-    transform: scale(0.98);
+.stats .grid h3 {
+  font-size: 35px;
 }
 
-.btn-outline{
-    border-color: transparent;
-    border: 1px solid #fff;
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+/* CLI */
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
+.cli .grid > *:first-child{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
 }
